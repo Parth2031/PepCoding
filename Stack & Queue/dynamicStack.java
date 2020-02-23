@@ -30,4 +30,19 @@ public class dynamicStack extends stack
 
     super.push(data);
   }
+
+  // TODO:: =================================================================================================================================
+
+  int b = 30;
+  int c = 40;
+
+  public void fun2() {
+      System.out.println("hi!!!");
+  }
+
+  public void fun() 
+  {
+    System.out.println(b);
+    System.out.println("hello Dynamic Stack");
+  }
 } 

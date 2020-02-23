@@ -6,6 +6,13 @@ public class stack
   protected int[] st;
   protected int tos = -1;
 
+  // ! Ckecking inheritance and polymorphism cases :-> 
+
+  int a = 10;
+  int b = 20;
+
+  // ! ================================================
+
   stack() {
     this.st = new int[10];
   }
@@ -23,6 +30,20 @@ public class stack
 
     this.tos = arr.length - 1;  
   }
+
+  // TODO:: ============================================================================================================================
+
+  // ! Again seeing inheritance and polymorphism case :->
+
+  public void fun1() {
+    System.out.println("hi!");
+  }
+
+  public void fun() {
+    System.out.println("hello Stack");
+  }
+
+  // TODO:: ============================================================================================================================
 
   public int size() {
     return tos + 1;

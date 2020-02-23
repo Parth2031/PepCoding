@@ -26,7 +26,27 @@ public class stackImplement
     // stack st = new stack(3);
     // solve(st);
 
-    dynamicStack dst = new dynamicStack();
-    solve(dst); 
+    // dynamicStack st = new dynamicStack();
+    // solve(st); 
+
+    // ! This case is wrong as all stack values are in dynamicStack but not all dynamicStack functions are in stack.
+    // ! So, dynamicStack points stack but memory is allocated for stack. 
+
+    // dynamicStack st = new stack(10);     
+    // solve(st);
+
+    // ! This case is correct all LHS pointer functions are printed but if a conflict arises it refers to the RHS memory allocated.
+    // ! So, RHS value gets evaluated. 
+
+    // stack st = new dynamicStack(10);
+    // solve(st);
+
+    // st.fun1();
+    // st.fun2();
+    // st.fun();
+
+    // System.out.println(st.a);
+    // System.out.println(st.b);
+    // System.out.println(st.c);
   }
 }

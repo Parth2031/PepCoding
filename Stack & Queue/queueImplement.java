@@ -2,21 +2,41 @@ import java.util.ArrayList;
 
 public class queueImplement
 {
+  public static void solve(dynamicQueue que)                 // ! queue que as an argument to call queue object.
+  {
+    // System.out.println("Queue: \n");     
+    // que.push(10);
+    // que.push(20);
+    // que.push(30);
+    // que.push(40);
+    // que.push(50);
+    // que.display(); 
+
+    // System.out.println("Size: " + que.front());
+    // System.out.println("Popped Element: " + que.pop());
+    // System.out.println();
+    // que.display();
+
+    System.out.println("Dynamic Queue: \n");     
+    que.push(10);
+    que.push(20);
+    que.push(30);
+    que.push(40);
+    que.push(50);
+    que.display(); 
+
+    System.out.println("Size: " + que.front());
+    System.out.println("Popped Element: " + que.pop());
+    System.out.println();
+    que.display();   
+  }
+
   public static void main(String[] args) 
   {
-    queue q = new queue(5);
-   
-    System.out.println("Queue: \n");     
-    q.push(10);
-    q.push(20);
-    q.push(30);
-    q.push(40);
-    q.push(50);
-    q.display(); 
+    // queue que = new queue(5);
+    // solve(que);   
 
-    System.out.println("Size: " + q.front());
-    System.out.println("Popped Element: " + q.pop());
-    System.out.println();
-    q.display();
+    dynamicQueue que = new dynamicQueue();
+    solve(que);
   }   
 }
