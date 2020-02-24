@@ -1,5 +1,7 @@
 public class dynamicStack extends stack
 {
+  // ! If we don't use these constructor's with super() then the code after this function in stack will not be called/fetched to be further used.
+
   dynamicStack() {
     super();
   }
@@ -32,6 +34,8 @@ public class dynamicStack extends stack
   }
 
   // TODO:: =================================================================================================================================
+
+  // ! In this, we are understanding polymorphism and inheritance case.
 
   int b = 30;
   int c = 40;

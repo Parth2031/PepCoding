@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.Scanner;
 
 public class stackImplement
 {
@@ -42,7 +42,7 @@ public class stackImplement
     // solve(st);
 
     // st.fun1();
-    // st.fun2();
+    // st.fun2();                                       // ! This will not work as it is part of of dynamicStack class.
     // st.fun();
 
     // System.out.println(st.a);
