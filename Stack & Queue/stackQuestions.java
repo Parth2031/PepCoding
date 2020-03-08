@@ -273,7 +273,9 @@ public class stackQuestions
     return st.size() == 0;
   }
 
-  public static int rainWater(int[] arr) 
+  // ! trap(int[] height) <-- Name of function in LeetCode.
+
+  public static int rainWater(int[] arr)                      
   {
     Stack<Integer> st = new Stack<>();
     
