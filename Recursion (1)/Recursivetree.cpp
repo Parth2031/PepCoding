@@ -21,6 +21,7 @@ int calls(int n)
 
   return count+3;
 }
+
 int calls_01(int n,int level)
 {
   if(n<=1)
@@ -46,14 +47,14 @@ int calls_01(int n,int level)
 
 int main(int args,char **argv)
 {
-   int n,level;
-   cout<<"Enter a number:";
-   cin>>n;
-   cout<<"Enter the level:";
-   cin>>level;
-   int count1=calls(n);
-   cout<<"Count of 1st tree : "<<count1<<endl;
-   int count2=calls_01(n,level); 
-   cout<<"Count of 2nd tree : "<<count2<<endl;
-   return 0;
+  int n,level;
+  cout<<"Enter a number:";
+  cin>>n;
+  cout<<"Enter the level:";
+  cin>>level;
+  int count1=calls(n);
+  cout<<"Count of 1st tree : "<<count1<<endl;
+  int count2=calls_01(n,level); 
+  cout<<"Count of 2nd tree : "<<count2<<endl;
+  return 0;
 }

@@ -11,6 +11,7 @@ public class BinaryTree
     Node right = null;
 
     public Node() {}
+
     public Node(int data) {
       this.data = data;
     }
@@ -51,7 +52,7 @@ public class BinaryTree
     System.out.println(node.right != null ? node.right.data:".");
                                              
     display(node.left);      // ! Display in terms of Index:  display(2*idx+1);   <-- Avoided for saving space.
-    display(node.right);     // ! Display in terms of Index:  display(2*idx+2);   <-- Avoided for saving space.
+    display(node.right);     // & Display in terms of Index:  display(2*idx+2);   <-- Avoided for saving space.
   } 
 
   static int idx = 0;
@@ -112,12 +113,12 @@ public class BinaryTree
   public static int height(Node node) 
   {
     if (node == null)          // ! In this, we returned "-1" as we wanted to get the height of tree in terms of edges. 
-      return -1;                       //  ! If returned "0", we get the height of tree in terms of vertex. 
+      return -1;                       //  & If returned "0", we get the height of tree in terms of vertex. 
             
     return Math.max(height(node.left), height(node.right)) + 1;
   }
 
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   public static ArrayList<Node> rootToNodePath(Node node,int data)
   {
@@ -135,7 +136,7 @@ public class BinaryTree
     }
   
     ArrayList<Node> left = rootToNodePath(node.left,data);
-    if(left.size() != 0)                                          // ! if(left.size() != null) for above case
+    if(left.size() != 0)                                          // ~ if(left.size() != null) for above case
     {
       left.add(node);
       return left;
@@ -151,7 +152,7 @@ public class BinaryTree
     return new ArrayList<>();        
   }
 
-  // TODO:: LCA -> Lowest Common Ancester of two nodes means, common parent of the two nodes.
+  // ^ LCA -> Lowest Common Ancester of two nodes means, common parent of the two nodes.
 
   public static int LCA_01(Node node,int data_1,int data_2)
   {
@@ -175,7 +176,7 @@ public class BinaryTree
     return ans;
   }
 
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   public static void kDown(Node node,Node prevent_node,int level) 
   {
@@ -229,7 +230,7 @@ public class BinaryTree
     return -1; 
   }
 
-  // TODO ================================================================================================================================
+  // ^ ================================================================================================================================
 
   // ! Diameter in tree means maximum distance between two leaf nodes.  
 
@@ -244,7 +245,7 @@ public class BinaryTree
     int leftHeight = height(node.left);  
     int rightHeight = height(node.right);
 
-    // ! In this, "+2" is for adding two edges from left tree and right tree to root while returning.
+    // * In this, "+2" is for adding two edges from left tree and right tree to root while returning.
 
     return Math.max(Math.max(leftDiameter,rightDiameter),leftHeight + rightHeight + 2);    
   }  
@@ -252,7 +253,7 @@ public class BinaryTree
   public static int[] maxDiameter_02(Node node)
   {
     if(node == null)                                                       // ! It has Complexity: O(n).
-      return new int[] {0,-1};                               // TODO:: In this, the parenthesis contains default {diameter,height}
+      return new int[] {0,-1};                               // ^ In this, the parenthesis contains default {diameter,height}
 
     int[] leftDiameter = maxDiameter_02(node.left);
     int[] rightDiameter = maxDiameter_02(node.right);
@@ -301,7 +302,7 @@ public class BinaryTree
     return Math.max(maxBranch + node.data,node.data);
   }
 
-  // TODO ==================================================================================================================================== 
+  // ^ ==================================================================================================================================== 
    
   // * In order to get Minimum Cameras, the node is dependent on it's parent to have the camera as it will cover it's child nodes and it's parent. 
 
@@ -341,7 +342,7 @@ public class BinaryTree
     return camera;
   }
 
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   int leftMost = -1;
   int rightMost = -1;
@@ -368,7 +369,7 @@ public class BinaryTree
 
     width(node,0);
 
-    // ! ArrayList <ArrayList> of the next line given code.
+    // & ArrayList <ArrayList> of the next line given code.
 
     ArrayList<Integer>[] list = new ArrayList[rightMost - leftMost];
     int sum[] = new int[rightMost - leftMost];
@@ -400,7 +401,7 @@ public class BinaryTree
       System.out.print(que_1);
   }
 
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   public static void solve()
   {

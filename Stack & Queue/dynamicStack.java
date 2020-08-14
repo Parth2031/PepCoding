@@ -26,14 +26,14 @@ public class dynamicStack extends stack
         st[i] = temp[i];
     }
 
-    // ! It works on inheritance and polymorphism.
-    // ! It only works at run time of code where it chooses whether to call dynamic or not depending on it's need. 
-    // TODO:: super.push(data) is used to make this push function as a part of stack class instead of copying all the functions from stack class.
+    // * It works on inheritance and polymorphism.
+    // & It only works at run time of code where it chooses whether to call dynamic or not depending on it's need. 
+    // ~ super.push(data) is used to make this push function as a part of stack class instead of copying all the functions from stack class.
 
     super.push(data);
   }
 
-  // TODO:: =================================================================================================================================
+  // ^ =================================================================================================================================
 
   // ! In this, we are understanding polymorphism and inheritance case.
 

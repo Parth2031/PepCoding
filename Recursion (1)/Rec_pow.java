@@ -1,4 +1,4 @@
-// ? In this Question, we are printing power of a number and betpow is increasing the range of writing power of number.
+// ^ In this Question, we are printing power of a number and betpow is increasing the range of writing power of number.
 
 import java.util.Scanner;
 
@@ -21,7 +21,7 @@ public class Rec_pow
   }
 
  // ! Since, Calling Stack limit is upto 65000 integer value and if exceeds it gives error of Stack Overflow.
- // ? So, if we want to find 2^100 but calling stack limit will not allow so we use better(bet) power which uses b=b/2*b/2.
+ // & So, if we want to find 2^100 but calling stack limit will not allow so we use better(bet) power which uses b=b/2*b/2.
 
   public static int betpow(int a, int b) 
   {

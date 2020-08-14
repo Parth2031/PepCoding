@@ -1,5 +1,5 @@
 // TODO:: In this file, there are two main algo: DSU(Disjoint Set Union)/Union Find & Kruskal Algo.
-// ? We make the Graph using kruskal Algorithm. 
+// & We make the Graph using kruskal Algorithm. 
 
 #include <iostream>
 #include <vector>

@@ -95,7 +95,7 @@ public class stackQuestions
       System.out.println(st.pop() + " -> " + -1 );
   } 
   
-  // TODO ==========================================================================================================================
+  // ^ ==========================================================================================================================
 
   // * LeetCode Questions :--->
 
@@ -131,7 +131,7 @@ public class stackQuestions
 
   public static String removeKDigits(String num,int k)                       // ? Name of function is : removeKdigits() in LeetCode.
   {
-    // ! It converts string like a character array. 
+    // & It converts string like a character array. 
 
     char[] arr = num.toCharArray();
     Stack<Character> st = new Stack<>();
@@ -151,7 +151,7 @@ public class stackQuestions
       st.pop();
 
     // ! StringBuilder reduces the time complexity but not space complexity.
-    // ! It also string like an charater of array with more properties and similar to String of c++/ Arraylist of characters.
+    // ^ It also string like an charater of array with more properties and similar to String of c++/ Arraylist of characters.
 
     StringBuilder sb = new StringBuilder();
 
@@ -176,7 +176,7 @@ public class stackQuestions
     return ans.length() != 0 ? ans : "0";
   }
 
-  // ! largestRectangleArea(int[] heights) <-- Name of function in LeetCode.
+  // ~ largestRectangleArea(int[] heights) <-- Name of function in LeetCode.
 
   public static int maxAreaInHistogram(int[] arr)         // ? TestCase in checking all conditions : {1,2,3,4,4,6,6,6,5,2,4,6,5}. 
   {
@@ -303,7 +303,7 @@ public class stackQuestions
     return ans;
   }
 
-  // TODO ========================================================================================================================== 
+  // ^ ========================================================================================================================== 
 
   public static void solve()
   {

@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class stackImplement
 {
-  public static void solve(dynamicStack st)                            // ! stack st as an argument to call stack object.
+  public static void solve(dynamicStack st)                            // ! Stack st as an argument to call stack object.
   {
     // System.out.println("Stack: \n");     
     // st.push(10);
@@ -30,13 +30,13 @@ public class stackImplement
     // solve(st); 
 
     // ! This case is wrong as all stack values are in dynamicStack but not all dynamicStack functions are in stack.
-    // ! So, dynamicStack points stack but memory is allocated for stack. 
+    // ^ So, dynamicStack points stack but memory is allocated for stack. 
 
     // dynamicStack st = new stack(10);     
     // solve(st);
 
     // ! This case is correct all LHS pointer functions are printed but if a conflict arises it refers to the RHS memory allocated.
-    // ! So, RHS value gets evaluated. 
+    // ^ So, RHS value gets evaluated. 
 
     // stack st = new dynamicStack(10);
     // solve(st);

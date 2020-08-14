@@ -20,6 +20,7 @@ public class Rec_Sudoku
     };
     System.out.println(isValid_Sudoku(arr,4,4,2));
   }
+
   void display(ArrayList<Integer> arr,int vidx)
   {
     if(vidx==arr.size())
@@ -27,11 +28,13 @@ public class Rec_Sudoku
     System.out.println(arr.get(vidx));
     display(arr,vidx+1);  
   }
+
   public static void solve()
   {
     ArrayList<Integer> arr="10,6,8,10,4,5,5,6,8,-3,2,12,8,3";
     display(arr,0); 
   }
+
   public static int[] allIndex(int[] arr,int vidx,int data,int size)
   {
     if(vidx==arr.length)
@@ -51,7 +54,7 @@ public class Rec_Sudoku
     return recAns;    
   }
 
-    public static Boolean isValid_Sudoku(int[][] board,int row,int col,int num)
+  public static Boolean isValid_Sudoku(int[][] board,int row,int col,int num)
   {
     // ! Row:
     for(int idx=0;idx<board.length;idx++)

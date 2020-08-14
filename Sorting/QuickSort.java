@@ -1,6 +1,6 @@
-// TODO:: Print {0,1,0,0,1,1,1,0,1,0,1} as {0,0,0,0,0,1,1,1,1,1,1} using Quick Sort.
-// TODO:: Quick Sort
-// ? li-->Left Index, ri-->Right Index
+// ^ Print {0,1,0,0,1,1,1,0,1,0,1} as {0,0,0,0,0,1,1,1,1,1,1} using Quick Sort.
+// ? Quick Sort
+// ! li --> Left Index, ri --> Right Index
 
 import java.util.Scanner;
 

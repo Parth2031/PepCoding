@@ -11,6 +11,7 @@ public class BinarySearchTree
     Node right = null;
 
     public Node() {}
+
     public Node( int data) {
       this.data = data;
     }
@@ -48,7 +49,7 @@ public class BinarySearchTree
     if(startIndex > endIndex)
       return null;
 
-    // ! mid = {startIndex + (endIndex - startIndex)/2} -> Alternative to find and is the best case to overcome overflow case.   
+    // ^ mid = {startIndex + (endIndex - startIndex)/2} -> Alternative to find and is the best case to overcome overflow case.   
 
     int mid = (startIndex + endIndex) >> 1;
     Node node = new Node(arr[mid]);
@@ -114,7 +115,7 @@ public class BinarySearchTree
     return node;
   }
  
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   public static class allSoln
   {
@@ -211,7 +212,7 @@ public class BinarySearchTree
     }
   } 
 
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   // ! rnode -> Remove node. 
 
@@ -266,7 +267,7 @@ public class BinarySearchTree
     return node;  
   }
 
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   public static Node rightMostOfNextLeft(Node leftNode,Node current)
   {
@@ -296,12 +297,12 @@ public class BinarySearchTree
         if(rightMost.right == null)
         {
           rightMost.right = current;                                        // ! Create Thread.
-          // System.out.print(current.data + " ");                // ! It is done here to show PreOrder Traversal.
+          // System.out.print(current.data + " ");                // & It is done here to show PreOrder Traversal.
           current = current.left;
         }
         else
         {
-          System.out.print(current.data + " ");                // ! It is done here to show InOrder Traversal.
+          System.out.print(current.data + " ");                // ~ It is done here to show InOrder Traversal.
           rightMost.right = null;                                         // ! Breaking Thread
           current = current.right;
         }
@@ -309,7 +310,7 @@ public class BinarySearchTree
     }
   }
 
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   // ! tnode -> Top Node.
 
@@ -424,7 +425,7 @@ public class BinarySearchTree
     }
   }
 
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   public static void solve()
   {
@@ -453,7 +454,6 @@ public class BinarySearchTree
     // PreOrder(root);
     // InOrder(root);
     // PostOrder(root);
-
   }
 
   public static void main(String[] args) {

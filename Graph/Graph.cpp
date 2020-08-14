@@ -45,8 +45,9 @@ void addEdge(int u,int v,int w)
   if(u<0 || v<0 || u>=n || v>=n)
     return;
 
-// ! We used "u" as starting vertex/node of our Graph and "v" as ending/destination vertx/node of Graph.
-// ! We added Edge from both "u" and "v" because we want the Edge to be bidirectional if edge is added once then, it will unidirectional edge.
+  // & We used "u" as starting vertex/node of our Graph and "v" as ending/destination vertx/node of Graph.
+  // ~ We added Edge from both "u" and "v" because we want the Edge to be bidirectional if edge is added once then, ....
+  // ~ .... it will unidirectional edge.
 
   graph[u].push_back(new Edge(v,w));
   graph[v].push_back(new Edge(u,w));
@@ -119,7 +120,7 @@ void removeVertex(int u)
   }
 }
 
-// TODO =========================================================================================================================
+// ^ =========================================================================================================================
 
 // ! src --> Source
 // ! dest --> Destination
@@ -208,7 +209,7 @@ void min_maxWeightPath(int src,int dest,vector<bool> &vis,int wsf,string psf)
   vis[src] = false;
 }
 
-// TODO =========================================================================================================================
+// ^ =========================================================================================================================
 
 // ? dfs --> Depth First Search 
 // ! Get Connected Component Question is used to tell the number of graphs present at that time as every time.
@@ -240,7 +241,7 @@ void getConnectedComponent(int src,vector<bool> &vis)
   cout<<endl<<"Total No. of Graphs: "<<component<<endl;
 }
 
-// TODO ============================================================================================================================
+// ^ ============================================================================================================================
 
 // ? bfs --> Breadth First Search
 // ! rvtx --> Remove Vertex
@@ -309,14 +310,14 @@ void bfs_alternative(int src,int dest,vector<bool> &vis)
   {
     int size = que.size();
 
-    // * We applied size-- loop so as to run the the queue where the neighbours are visited and as soon as level gets complete.
+    // ? We applied size-- loop so as to run the the queue where the neighbours are visited and as soon as level gets complete.
     // * Alternative to -1 to see as level completion.
 
     while (size-- > 0)
     {
       // ! In this, rvtx is used to find the element which is in the front of queue and it is popped making it delete from queue.
-      // ! But then, the other loops are used to add its neighbours making the queue not empty and 
-      // ! It gets finally after all the level elements are popped.
+      // & But then, the other loops are used to add its neighbours making the queue not empty and 
+      // ~ It gets finally after all the level elements are popped.
 
       int rvtx = que.front();
       que.pop();
@@ -346,7 +347,7 @@ void bfs_alternative(int src,int dest,vector<bool> &vis)
   } 
 }
 
-// TODO ===========================================================================================================================
+// ^ ===========================================================================================================================
 
 // ! vtx --> Vertex
 // ! osrc --> Original Source
@@ -385,12 +386,12 @@ int hamiltonianPath(int vtx,int osrc,int vtxCount,vector<bool> &vis,string ans)
   return count;
 }
 
-// TODO =================================================================================================================================
+// ^ =================================================================================================================================
 
 bool isBipartiteGraph(int i,vector<int> &vis)
 {
 
-// ! Pair is used to see that whether an vertex that was visited before has same color or value if not than it is not  Bipartite Graph. 
+  // ! Pair is used to see that whether an vertex that was visited before has same color or value if not than it is not  Bipartite Graph. 
 
   queue<pair<int,int>> que;
   bool flag = true;
@@ -402,7 +403,7 @@ bool isBipartiteGraph(int i,vector<int> &vis)
     pair<int,int> rvtx = que.front();
     que.pop();
   
-// ! "first" is used to access the vertex of pair and "second" is used to access the color or value visited before has same value or not.
+  // & "first" is used to access the vertex of pair and "second" is used to access the color or value visited before has same value or not.
 
     if(vis[rvtx.first] != -1) 
     {
@@ -443,7 +444,7 @@ void isBipartite()
   }  
 }
 
-// TODO ============================================================================================================================
+// ^ ============================================================================================================================
 
 
 // ! AP -> Articulation Points
@@ -470,14 +471,14 @@ void dfs_AP(int src,int parent,int osrc)
 
       dfs_AP(e->v,src,osrc);
 
-      if(discover[src] <= low[e->v])                                     // ! AP Point
+      if(discover[src] <= low[e->v])                                     // & AP Point
         ApPoints[src] = true;
-      if(discover[src] < low[e->v])                                   // ! AP Bridge (Edge)
+      if(discover[src] < low[e->v])                                   // ~ AP Bridge (Edge)
         cout <<"AP Edge: " << src << " to " << e->v << endl;  
     
       low[src] = min(low[src],low[e->v]);
     }
-    else if(e->v != parent)                                            // ! Visited Vertex 
+    else if(e->v != parent)                                            // * Visited Vertex 
       low[src] = min(low[src],discover[e->v]);                       // ? Region for Back Edge 
   }
 }
@@ -497,7 +498,7 @@ void AP()
   }  
 }
 
-// TODO ============================================================================================================================
+// ^ ============================================================================================================================
 
 void solve()
 {

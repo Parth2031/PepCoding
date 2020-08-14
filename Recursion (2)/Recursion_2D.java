@@ -1,6 +1,6 @@
-// ? In this Question-1, if we input "245" we will print all possible words from it (Nokia Keypad).
-// ? In this Question-2, if we input "abc" we will get all possible permutation as [c,bc,cb,abc,bac,bca,acb,cab,cba].
-// ? In this Question-3, if we input "1123" where {1=a,2=b,--,26=z} we will get [1 as a,11 as k,etc as all possible combinations]. 
+// ^ In this Question-1, if we input "245" we will print all possible words from it (Nokia Keypad).
+// & In this Question-2, if we input "abc" we will get all possible permutation as [c,bc,cb,abc,bac,bca,acb,cab,cba].
+// ~ In this Question-3, if we input "1123" where {1=a,2=b,--,26=z} we will get [1 as a,11 as k,etc as all possible combinations]. 
 // ? In this Question-4, we are doing Sudoku Problem.
 // ! In this, "ros" means "rest of string" & instead of "index" we can write "idx".
 
@@ -17,7 +17,9 @@ public class Recursion_2D
     //System.out.println(stringPerm("abc"));
     //System.out.println(Encoding("1123"));
     ////System.out.println(stringPermwwithoutDuplicates("aabbc"));
-    int[][] board={
+    
+    int[][] board =
+    {
       {3,0,6,5,0,8,4,0,0},
       {5,2,0,0,0,0,0,0,0},
       {0,8,7,0,0,0,0,3,1},
@@ -28,6 +30,7 @@ public class Recursion_2D
       {0,0,0,0,0,0,0,7,4},
       {0,0,5,2,0,6,3,0,0}
     };
+
     // System.out.println(isValid_Sudoku(board,2,4,4));
     System.out.println(Sudoku(board,0));
   }
@@ -62,6 +65,7 @@ public class Recursion_2D
   {
     if(str.length()==0)
       return new ArrayList<>();
+    
     if(str.length()==1)
     {
       ArrayList<String> base=new ArrayList<>();
@@ -188,7 +192,7 @@ public class Recursion_2D
     boolean res=false;
 
     if(board[r][c]!=0)
-       res=res || Sudoku(board,vidx+1);  // ! Bit Masking to reduce memory space.
+       res=res || Sudoku(board,vidx+1);               // ! Bit Masking to reduce memory space.
     else
     {
       for(int num=1;num<=9;num++)

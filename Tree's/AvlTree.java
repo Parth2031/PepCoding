@@ -65,7 +65,7 @@ public class AvlTree
     x.right = y_left;
 
     // ! In this, "x" is the root and "y" is it's child.
-    // ! In this, we update the height of "x" first as "x" becomes the child of "y" so the height of "x" affect the height of "y".
+    // ^ In this, we update the height of "x" first as "x" becomes the child of "y" so the height of "x" affect the height of "y".
 
     updateHeightAndBalance(x);
     updateHeightAndBalance(y);
@@ -90,11 +90,11 @@ public class AvlTree
 
   public static Node rotation(Node node)
   {
-    // TODO:: In this, we update height and balance in order to see whether the rotation is needed or not. 
+    // ^ In this, we update height and balance in order to see whether the rotation is needed or not. 
 
     updateHeightAndBalance(node);
 
-    // ! Either left-left or left-right rotation.
+    // & Either left-left or left-right rotation.
 
     if(node.balance == 2)
     {
@@ -108,7 +108,7 @@ public class AvlTree
       }    
     }
 
-    // ! Either right-right or right-left rotation.
+    // & Either right-right or right-left rotation.
 
     else if(node.balance == -2)
     {
@@ -182,13 +182,7 @@ public class AvlTree
     return node;  
   }
 
-  // TODO ================================================================================================================================ 
-
-
-
-
-
-  // TODO ================================================================================================================================ 
+  // ^ ================================================================================================================================ 
 
   public static void solve()
   {
@@ -199,9 +193,7 @@ public class AvlTree
     // root = removeData(root,80);
 
     System.out.println("AVL Tree: \n");
-    System.out.println(root);
-    
-    
+    System.out.println(root);  
   } 
 
   public static void main(String[] args) {

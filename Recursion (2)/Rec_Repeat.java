@@ -1,8 +1,8 @@
-// ? In this Question-1, we need to remove all "hi" and print the remaining string back.
-// ? In this Question-2, we need to remove all duplicates in "aaaabbbcccddd" and print back "abcd".
-// ? In this Question-3, we need to remove all "hi" except "hit". 
+// ^ In this Question-1, we need to remove all "hi" and print the remaining string back.
+// & In this Question-2, we need to remove all duplicates in "aaaabbbcccddd" and print back "abcd".
+// ~ In this Question-3, we need to remove all "hi" except "hit". 
 // ? In this Question-4, we need to count all the number of alphabets used like "aaaabbbccde" and print back "a4b3c2de".
-// ? In this Question-5, we need to print a string from "abc" to [ , c , b , bc , ab , ac , abc].  
+// * In this Question-5, we need to print a string from "abc" to [ , c , b , bc , ab , ac , abc].  
 // ! In these Questions, "idx" means "index" and "ques" means "question". 
 
 import java.util.Scanner;
@@ -13,13 +13,13 @@ public class Rec_Repeat
   public static Scanner scn = new Scanner(System.in);
   public static void main(String[] args) 
   { 
-     String str=scn.nextLine();
-     //System.out.println(removeHi(str));
-     //System.out.println(removeDuplicates(str));
-     //System.out.println(removeHibutnotHit(str));
-     //System.out.println(compression(str,1,1));
-     String Str="ABCD"; 
-     System.out.println(subsequence(Str));
+    String str=scn.nextLine();
+    //System.out.println(removeHi(str));
+    //System.out.println(removeDuplicates(str));
+    //System.out.println(removeHibutnotHit(str));
+    //System.out.println(compression(str,1,1));
+    String Str="ABCD"; 
+    System.out.println(subsequence(Str));
   }
 
   public static String removeHi(String ques)
@@ -63,6 +63,7 @@ public class Rec_Repeat
 
     char ch=dup.charAt(0);
     String recAns=removeDuplicates(dup.substring(1));
+   
     if(ch==recAns.charAt(0)) 
       return recAns;
     else  
@@ -71,10 +72,12 @@ public class Rec_Repeat
 
   public static String compression(String charcount,int idx,int count)
   {
-    if(idx==charcount.length()){
-     String ans = charcount.charAt(idx-1) + (count>1?count+"":"");
-     return ans;
+    if(idx==charcount.length())
+    {
+      String ans = charcount.charAt(idx-1) + (count>1?count+"":"");
+      return ans;
     }
+    
     if(charcount.charAt(idx-1)==charcount.charAt(idx))
       return compression(charcount,idx+1,count+1);
     else
@@ -104,8 +107,8 @@ public class Rec_Repeat
 
     // ! This for loop helps in adding 'A' to 'BCD' from the above recursion
 
-    // TODO:: For Loop is a forEach loop & its Syntax: --> for(type variable:---){------} 
-    // TODO:: ALternative: for(i=;i<recAns.length();i++)
+    // ^ For Loop is a forEach loop & its Syntax: --> for(type variable:---){------} 
+    // * ALternative: for(i=;i<recAns.length();i++)
     
     for(String s:recAns){
       myAns.add(ch+s);

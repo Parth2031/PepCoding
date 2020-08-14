@@ -1,5 +1,5 @@
 // ? In this Question, There are "n numbers" which are repeated by "k times" and "1 number" wil be repeated only "one time".  
-// ! Example -> 2,3,5,10 are repeated by 3 times and 14 is repeated only once.
+// * Example -> 2,3,5,10 are repeated by 3 times and 14 is repeated only once.
  
 #include <iostream>
 #include <vector>
@@ -15,10 +15,9 @@ int uniqueInK(vector<int> &arr,int k)
     for(int i=0;i<32;i++)
     {
       int mask=(1<<i);
-      if((ele & mask)!=0){  // ! Checking On condition 
+      if((ele & mask)!=0) {                  // ! Checking On condition 
         bits[i]++;
-        }
-
+      }
     }
   }
 

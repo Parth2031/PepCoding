@@ -11,6 +11,7 @@ class Node
     vector<Node*> childs;
   
   Node() {}
+  
   Node(int data) {
     this->data = data;
   } 
@@ -49,8 +50,8 @@ Node* createTree(vector<int> &arr)
       Node* node = st.top();
       st.pop();
  
-      // ! "." means accessing a local variable.
-      // ! "->" means accessing/linking a stack from heap memory.
+      // ~ "." means accessing a local variable.
+      // & "->" means accessing/linking a stack from heap memory.
 
       st.top()->childs.push_back(node);
     }
@@ -59,7 +60,7 @@ Node* createTree(vector<int> &arr)
   return st.top();
 }
 
-// TODO ====================================================================================================================================
+// ^ ====================================================================================================================================
 
 // ! sz -> size
 // ! h -> height
@@ -106,7 +107,7 @@ bool find(Node* node,int data)
   return result;    
 }
 
-// TODO ==================================================================================================================================
+// ^ ==================================================================================================================================
 
 Node* getTail(Node* node)
 {
@@ -148,7 +149,7 @@ Node* linearTree_2(Node* node)
   return myTail;
 }
 
-// TODO ==================================================================================================================================
+// ^ ==================================================================================================================================
 
 void removeLeafNodes(Node* node)
 {
@@ -166,7 +167,7 @@ void removeLeafNodes(Node* node)
     removeLeafNodes(child);
 }
 
-// TODO ==================================================================================================================================
+// ^ ==================================================================================================================================
 
 class allSol
 {
@@ -182,8 +183,8 @@ class allSol
   int floor = -1e8;
 };
 
-// ! In this allSol class, is used as an address reference in allSolution function making it as an local variable to the function.
-// ! So, we can use the dot operator instead of arrow operator.
+// ^ In this allSol class, is used as an address reference in allSolution function making it as an local variable to the function.
+// & So, we can use the dot operator instead of arrow operator.
 
 void allSolution(Node *node, int data, int level, allSol &pair)
 {
@@ -212,7 +213,7 @@ void allSolution(Node *node, int data, int level, allSol &pair)
     allSolution(child, data, level + 1, pair);
 }
 
-// TODO ===================================================================================================================================
+// ^ ===================================================================================================================================
 
 bool isSymmetric(Node* node_1,Node* node_2)
 {
@@ -248,7 +249,7 @@ bool isMirror(Node* node_1,Node* node_2)
   return true;  
 }
 
-// TODO ==================================================================================================================================
+// ^ ==================================================================================================================================
 
 void solve()
 {
@@ -278,9 +279,7 @@ void solve()
   // vector<int> ar_2 = {10,40,130,-1,120,-1,-1,30,90,-1,80,110,-1,100,-1,-1,70,-1,-1,20,60,-1,50,-1,-1};
   // Node* ro_2 = createTree(ar_2);
   // display(ro_2);   
-  // cout<<"Mirror Value of two Generic Trees are same: "<<boolalpha<<isMirror(ro_1,ro_2)<<endl;
-
-     
+  // cout<<"Mirror Value of two Generic Trees are same: "<<boolalpha<<isMirror(ro_1,ro_2)<<endl;     
 }
 
 int main(int args,char** argv)
