@@ -1,6 +1,6 @@
 # PepCoding
 
-It includes numerous questions solved on DS &amp; Algo (Done in class)
+It includes numerous questions solved on DS &amp; Algo with Concepts (Done in class)
 
 ## Topics :-
 
@@ -9,7 +9,6 @@ It includes numerous questions solved on DS &amp; Algo (Done in class)
 * Graph
 * Trees
 * Stack & Queues
-
 * Heap, Hashmap
 * Linked List
 * Dynamic Programming
