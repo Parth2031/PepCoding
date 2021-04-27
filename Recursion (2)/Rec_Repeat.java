@@ -13,7 +13,7 @@ public class Rec_Repeat
   public static Scanner scn = new Scanner(System.in);
   public static void main(String[] args) 
   { 
-    String str=scn.nextLine();
+    // String str=scn.nextLine();
     //System.out.println(removeHi(str));
     //System.out.println(removeDuplicates(str));
     //System.out.println(removeHibutnotHit(str));
