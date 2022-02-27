@@ -107,7 +107,6 @@ public class stackQuestions
     {
       if(arr[i] > 0)
         st.push(arr[i]);
-
       else
       {
         while(st.size() != 0 && st.peek() > 0 && st.peek() < (-arr[i]))
@@ -123,7 +122,7 @@ public class stackQuestions
 
     int[] ans = new int[st.size()];
 
-    for(int i = ans.length - 1;i >= 0;i++)
+    for(int i = ans.length - 1;i >= 0;i--)
       ans[i] = st.pop();
 
     return ans;  
